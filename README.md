@@ -2,26 +2,20 @@
 
 ### Background Requirements
 To run the NoteList in your computer, you should have the following dependencies in your computer.
-1. node
-2. npm
-3. mongodb
-
-If you  have not this dependencies in your computer you can install using official documentations.
+Node ,express,  npm ,mongodb should have a computer. If you  have not this dependencies in your computer you can install using official documentations.
 
 ### How to run the NoteList
- *  Make sure that mongodb is running
+ *  First, make sure that mongodb is running and then change db host and post if mongodb databasre's host, port and database name are deferent in app.js.
 
- *  Change db host and post if mongodb databasre's host, port and database name are deferent in app.js.
-
- *  Install npm packages
+ *  As the secon step, install npm packages using,
  ```
   npm install
  ```
- *  Run backend
+ *  Then run backend server using,
  ```
  npm start
  ```
- *  Api will be served at 
+ *  API will be served at 
  ```
  localhost:[port]/notes/
  ```
