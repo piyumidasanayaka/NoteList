@@ -1,0 +1,8 @@
+# remove node_modules
+/node_modules
+
+# remove package-lock.json
+package-lock.json
+
+# remove environment config files
+.env
