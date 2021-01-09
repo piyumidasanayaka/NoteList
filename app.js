@@ -8,9 +8,9 @@ require('dotenv/config');
 app.use(bodyParser.json());
 
 //import routes
-const postRoute = require('./routes/posts');
+const postRoute = require('./routes/notes');
 
-app.use('/posts', postRoute);
+app.use('/notes', postRoute);
 
 
 

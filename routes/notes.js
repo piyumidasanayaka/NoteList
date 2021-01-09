@@ -4,28 +4,25 @@ const Note= require('../models/Note');
 
 const NoteController = require('../controller/noteController')
 
-// add a new note
-router.post("/add",NoteController.add_note)
+router.post("/",NoteController.addNote)
 
 /* get all notes of a user
    get all archived notes of a user
    get all notArchived notes of a user
 */
-router.get("/notes",NoteController.get_notes)
+router.get("/", NoteController.getNotes)
 
 // get a note by using id of a user
-router.get("/notes/:noteId",NoteController.get_noteById)
+router.get("/:noteId", NoteController.getNoteById)
 
-// update a note
-router.put("/update/:noteId",NoteController.update_note)
+router.put("/:noteId", NoteController.updateNote)
 
  /* archive a note
     unarchive a note
   */
-router.patch("/archiveunarchive/:noteId",NoteController.archive_n_unarchive)
+router.patch("/:noteId", NoteController.archiveUnarchive)
 
-// delete a note
-router.delete("/delete/:noteId",NoteController.delete_note)
+router.delete("/:noteId", NoteController.deleteNote)
 
     
 module.exports = router; 

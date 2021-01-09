@@ -9,7 +9,9 @@
 		"00c8d013-ba97-4bc4-faae-f396bd384711",
 		"5d4f8b55-e8d1-aa09-bb87-1c3cbebbeee7",
 		"902c0c68-e3e2-2f3e-120c-5c9f571462c3",
-		"e3829de5-92a2-5a47-e680-b647bc53db83"
+		"e3829de5-92a2-5a47-e680-b647bc53db83",
+		"f2b8e072-f341-6649-796a-99bca98f7713",
+		"00a9add6-8e1b-33da-ca08-87d64f616ab8"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -17,6 +19,52 @@
 	"owner": "4680996",
 	"public": false,
 	"requests": [
+		{
+			"id": "00a9add6-8e1b-33da-ca08-87d64f616ab8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/notes/5ff9a50fccf441410c96e3c6?userId=1F&archive=true",
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "1F",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "archive",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
+			"data": [],
+			"dataMode": "raw",
+			"name": "ArchiveNote",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1610196306441,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"userId\":\"1F\",\n\t\"title\": \"Hi, 1F \",\n\t\"description\": \"This is 1F's note\",\n\t\"archive\": false\n\t\n}"
+		},
 		{
 			"id": "00c8d013-ba97-4bc4-faae-f396bd384711",
 			"headers": "Content-Type: application/json\n",
@@ -28,7 +76,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:3000/posts/delete/5ff98135ae61844520d051c4?user_id=1B",
+			"url": "localhost:3000/notes/5ff9a35fce5628444c636b4b?userId=1D",
 			"queryParams": [
 				{
 					"key": "id",
@@ -38,8 +86,8 @@
 					"enabled": false
 				},
 				{
-					"key": "user_id",
-					"value": "1B",
+					"key": "userId",
+					"value": "1D",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -62,7 +110,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1610187624971,
+			"time": 1610196575830,
 			"name": "DeleteNote",
 			"description": "",
 			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
@@ -86,55 +134,60 @@
 					"enabled": false
 				}
 			],
-			"url": "localhost:3000/posts/notes/5ff97e63c5f07415d8fa7cf6?user_id=1B",
+			"url": "localhost:3000/notes/5ff9a33601c1b737c43a1909?userId=1D",
 			"queryParams": [
 				{
-					"key": "user_id",
-					"value": "1B",
+					"key": "userId",
+					"value": "1D",
 					"equals": true,
 					"description": "",
 					"enabled": true
+				},
+				{
+					"key": "archive",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": false
 				}
 			],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
 			"data": null,
 			"dataMode": "params",
-			"name": "GetNoteById",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1610186958983,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1610196654272,
+			"name": "GetNoteById",
+			"description": "",
+			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
+			"responses": []
 		},
 		{
 			"id": "68a01f78-a856-bf58-9f23-eea80080ea57",
 			"headers": "",
 			"headerData": [],
-			"url": "localhost:3000/posts",
+			"url": "localhost:3000/notes",
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
 			"data": null,
 			"dataMode": "params",
-			"name": "GetNote",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1610163863908,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1610196322816,
+			"name": "GetNote",
+			"description": "",
+			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
+			"responses": []
 		},
 		{
 			"id": "6e43e79d-5a7b-1921-4241-6681314e8b84",
@@ -147,11 +200,11 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:3000/posts/update/5ff91a1b3ee9d12d3c45acbd?user_id=1A",
+			"url": "localhost:3000/notes/5ff9a35fce5628444c636b4b?userId=1D",
 			"queryParams": [
 				{
-					"key": "user_id",
-					"value": "1A",
+					"key": "userId",
+					"value": "1D",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -167,22 +220,22 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1610187372926,
+			"time": 1610196478101,
 			"name": "UpdateNote",
 			"description": "",
 			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
 			"responses": [],
-			"rawModeData": "{\n\t\"user_id\": \"1A\",\n\t\"title\": \"Updated Title of 1A\",\n\t\"description\": \"Updated description\",\n\t\"archive\": true\n\t\n}"
+			"rawModeData": "{\n\t\"userI\": \"1D\",\n\t\"title\": \"Updated Title of 1D\",\n\t\"description\": \"Updated description\",\n\t\"archive\": false\n\t\n}"
 		},
 		{
 			"id": "902c0c68-e3e2-2f3e-120c-5c9f571462c3",
 			"headers": "",
 			"headerData": [],
-			"url": "localhost:3000/posts/notes/?user_id=1B&archive=true",
+			"url": "localhost:3000/notes/?userId=1D&archive=true",
 			"queryParams": [
 				{
-					"key": "user_id",
-					"value": "1B",
+					"key": "userId",
+					"value": "1D",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -195,22 +248,21 @@
 					"enabled": true
 				}
 			],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
 			"data": null,
 			"dataMode": "params",
-			"name": "GetArchivedNotes",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1610187153181,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1610196742141,
+			"name": "GetArchivedNotes",
+			"description": "",
+			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
+			"responses": []
 		},
 		{
 			"id": "b27a82c9-a6c7-96c0-abda-acebda5fe841",
@@ -223,7 +275,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:3000/posts/add",
+			"url": "localhost:3000/notes/",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -235,12 +287,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1610187069238,
+			"time": 1610196246404,
 			"name": "PostNote",
 			"description": "",
 			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
 			"responses": [],
-			"rawModeData": "{\n\t\"user_id\":\"1B\",\n\t\"title\": \"Hi, 1B \",\n\t\"description\": \"This is 1B's 2nd note\",\n\t\"archive\": true\n\t\n}"
+			"rawModeData": "{\n\t\"userId\":\"1F\",\n\t\"title\": \"Hi, 1F \",\n\t\"description\": \"This is 1F's note\",\n\t\"archive\": false\n\t\n}"
 		},
 		{
 			"id": "e3829de5-92a2-5a47-e680-b647bc53db83",
@@ -279,6 +331,59 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {}
+		},
+		{
+			"id": "f2b8e072-f341-6649-796a-99bca98f7713",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/notes/5ff9a35fce5628444c636b4b?userId=1D&archive=false",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "5ff97e63c5f07415d8fa7cf6",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "userId",
+					"value": "1D",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "archive",
+					"value": "false",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": "",
+			"method": "PATCH",
+			"collectionId": "b4d0ce73-f5cc-6f9b-9001-0b189dd07b31",
+			"data": [],
+			"dataMode": "raw",
+			"name": "UnarchiveNote",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1610196092800,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"userId\": \"1D\",\n\t\"title\": \"Title of 1D\",\n\t\"description\": \"description of 1D\",\n\t\"archive\": true\n\t\n}"
 		}
 	]
 }
