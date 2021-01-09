@@ -7,15 +7,15 @@ Node ,express,  npm ,mongodb should have a computer. If you  have not this depen
 ### How to run the NoteList
  *  First, make sure that mongodb is running and then change db host and post if mongodb databasre's host, port and database name are deferent in app.js.
 
- *  As the secon step, install npm packages using,
+ *  As the second step, install npm packages using following command.
  ```
   npm install
  ```
- *  Then run backend server using,
+ *  Then run backend server using this command.
  ```
  npm start
  ```
- *  API will be served at 
+ *  After, API will be served at 
  ```
  localhost:[port]/notes/
  ```
