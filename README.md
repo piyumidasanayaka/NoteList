@@ -209,12 +209,12 @@ __v:0
     "message": "Note unarchieved"
   }
   ```
+  ### Why Node.js??
+  They provide easy way to declare API, handle incoming parameters, errors, transformation to JSON, streaming and sending response.
+  ### Why MongoDB
+  The document data model is a powerful way to store and retrieve data that allows developers to move fast. 
   
-  
-   
-  
-  
-  
- 
- 
+  ### Suggestions for further work
+  1. Add validating part for attribute's inputs.
+  2. Add Authentication phase. becasue it is necessary to use authentication mechanism/protocol such as Json Web Token(JWT).
  
