@@ -1,0 +1,147 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: NoteList
+  description: This is the RESTfull API specification for Note backen application.
+
+paths:
+  /notes:
+    description: Get all notes of a user
+    parameters:
+        - in: query
+          name: userId
+          description: To get notes of a user
+          required: true
+          schema:
+            type: string
+    responses:
+        "200":
+          description: Successful response(Success).
+          content:
+            application/json:
+              schema:
+                type: object 
+
+          "500":
+          description: Server error(Internal Server Error).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string
+    post:
+      description: Add a Note.
+      requestBody:
+        description: Add a note to database
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateStudent"
+      requestBody:
+        description: Add Note to database
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        "201":
+          description: Successfull Created(Created).
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: Server error(Internal Server Error).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string
+    /notes/{noteId}:
+    put:
+      description: Update a Note
+      parameters:
+        - in: path
+          name: noteId
+          description: details of Note to return
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful response(Success).
+          content:
+            application/json:
+              schema:
+                $ref: "#/model/NoteSchema"
+        "500":
+          description: Server error(Internal Server Error).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string
+      /notes/{noteId}:              
+      patch:
+      description: update a archive state 
+      parameters:
+        - name: noteId
+          in: path
+          description: details of note to return
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: update note object that needs to be added to the db
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        "200":
+          description: Successful response (Success).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string
+                    "500":
+          description: Server error(Internal Server Error).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string
+    /note/{noteId}:
+    delete:
+      description: Delete a note
+      parameters:
+        - name: noteId
+          in: path
+          description: details of Note to return
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successfully deleted(Success response).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reason:
+                    type: string

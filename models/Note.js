@@ -11,14 +11,16 @@ const NoteSchema = mongoose.Schema({
         type: String,
         required : true
     },
+
     description :{
         type: String,
         required : true
     },
+    
     archive: {
         type: Boolean,
         required : true
     }, 
 });
 
-module.exports= mongoose.model('Note', NoteSchema)
+module.exports= mongoose.model('Note', NoteSchema);

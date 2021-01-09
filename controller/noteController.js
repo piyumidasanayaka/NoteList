@@ -116,7 +116,7 @@ exports.updateNote=(req, res, next) => {
                 note.update( { $set: updateOps })
                  .exec()
                 .then(result => {
-                     res.status(200).json(result);
+                     res.status(200).json({_id:id, message:'Note updated'});
                 })
             }   
         })
@@ -144,7 +144,7 @@ exports.archiveUnarchive=(req, res, next) => {
                     if(boolValue == true){
                         note.update({_id:id, $set:{archive:boolValue}})
                             .then(result => {
-                                 res.status(200).json(result);
+                                 res.status(200).json({_id:id, message:'Note unarchieved'});
                                  })
                                  .catch(err => {
                                  res.status(500).json({error: err});
@@ -156,7 +156,7 @@ exports.archiveUnarchive=(req, res, next) => {
                         if(boolValue != true){
                             note.update({_id:id, $set:{archive:boolValue}})
                             .then(result => {
-                                 res.status(200).json(result);
+                                 res.status(200).json({_id:id, message:'Note archived'});
                                  })
                                  .catch(err => {
                                  res.status(500).json({error: err});
