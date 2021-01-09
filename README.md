@@ -216,5 +216,6 @@ __v:0
   
   ### Suggestions for further work
   1. Add validating part for attribute's inputs.
+  3. Error handeling have to be done more precisely
   2. Add Authentication phase. becasue it is necessary to use authentication mechanism/protocol such as Json Web Token(JWT).
  
