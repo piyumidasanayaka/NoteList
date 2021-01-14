@@ -31,10 +31,10 @@ Node ,express,  npm ,mongodb should have a computer. If you  have not this depen
  Here I use port 3000.
  
  1. * Add a note
- ```
+```
  localhost:3000/notes/
- ```
-    *  Sample body
+  ```
+  * Sample request body
  ```
  {
 	"userId":"1F",
